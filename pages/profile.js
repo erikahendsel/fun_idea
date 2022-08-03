@@ -25,6 +25,7 @@ export const getServerSideProps = withPageAuthRequired({
 
 export default function Profile({ user, orders }) {
   const route = useRouter();
+
   return (
     user && (
       <UserProfileContainer>
@@ -44,21 +45,30 @@ export default function Profile({ user, orders }) {
           </button>
         </UserInfo>
 
-        <OrderContainer>
-          {orders.map((order) => (
-            <Order key={order.id}>
-              <p>
-                <b>Order Number:</b> {order.id}
-              </p>
-              <p>
-                <b>Amount:</b> {currencyFormatter(order.amount)}
-              </p>
-              <p>
-                <b>Receipt Email:</b> {user.email}
-              </p>
-            </Order>
-          ))}
+        {orders.some(el => el.charges.data.length > 0) ? (
+                  <OrderContainer>
+                  {orders.map((order) => (
+                    (order.charges.data.length > 0 ) && (
+                      <Order key={order.id}>
+                      <p>
+                        <b>Order Number:</b> {order.id}
+                      </p>
+                      <p>
+                        <b>Amount:</b> {currencyFormatter(order.amount)}
+                      </p>
+                      <p>
+                        <b>Receipt Email:</b> {user.email}
+                      </p>
+                    </Order>
+                    )
+                  ))}
+                </OrderContainer>
+        ) : (
+          <OrderContainer>
+            <p style={{textAlign: "center", padding: "2em 0"}}>Your future orders will appear here</p>
         </OrderContainer>
+        )}
+
       </UserProfileContainer>
     )
   );
