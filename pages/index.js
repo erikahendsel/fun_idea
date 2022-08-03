@@ -55,7 +55,7 @@ export default function Home() {
             you!
           </p>
           <p>
-            You can go through our list and even add ideas to your cart! We'll
+            You can go through our list and even add ideas to your cart! We&apos;ll
             send you a lovely e-mail with your chosen activities.
           </p>
         </IntroductionText>
