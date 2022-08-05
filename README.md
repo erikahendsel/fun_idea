@@ -44,7 +44,7 @@ Few things to keep in mind:
 6. Stripe is used as the payment tool.
 7. Framer motion is used as an animation tool.
 
-![Overview Diagram](https://github.com/[erikahendsel]/[fun_idea]/blob/[main]/overview_diagram.jpg?raw=true)
+![Overview Diagram](overview_diagram.jpg?raw=true "Overview Diagram")
 
 When deploying: 
 1. make sure your rule links are updated to the production links. 
