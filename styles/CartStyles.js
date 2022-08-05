@@ -69,6 +69,7 @@ export const Card = styled(motion.div)`
   img {
     width: 100%;
     border-radius: 10px;
+    cursor: default;
   }
 
   h2 {
@@ -108,6 +109,9 @@ export const EmptyStyle = styled(motion.div)`
   h1 {
     font-size: 2rem;
     margin-bottom: 2em;
+  }
+  img {
+    cursor: default;
   }
 `;
 

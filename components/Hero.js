@@ -45,7 +45,7 @@ export default function Hero() {
           layout="fill"
           objectFit="cover"
           objectPosition="center"
-          alt="couple camping"
+          alt="sunrise"
           quality={100}
         />
       </HeroImageWrapper>
