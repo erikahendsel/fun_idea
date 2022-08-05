@@ -49,3 +49,15 @@ Few things to keep in mind:
 When deploying: 
 1. make sure your rule links are updated to the production links. 
 2. Make sure you have an .env.production file with links(and without public and secret keys).
+
+## Payment in test mode
+
+FunIdea does not provide any real products, so it only makes sense to keep it in test mode. Payment methods are not accepted. If you want to test and see what happens after paying do the following (image below as an instruction):
+
+1. Write random name as a card holder name.
+2. Card number is easy, just keep pressin 4 and 2 one after another: 4242 4242 4242 4242
+3. MM/YY: 04/24
+4. CV: 424
+5. Name on the card: anything
+
+![Paying in Test mode](paying_in_test_mode.png?raw=true "Paying in Test mode")
