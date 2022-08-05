@@ -15,6 +15,7 @@ export const DetailsStyle = styled.article`
     display: flex;
 
     img {
+      width: auto;
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px;
     }
