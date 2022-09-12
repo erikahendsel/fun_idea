@@ -87,7 +87,9 @@ a {
 }
 
 /* Animation */
-
+.loading-container {
+  margin: 0 1em;
+}
 .loading-animation {
   display: inline-block;
   position: relative;

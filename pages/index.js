@@ -15,21 +15,25 @@ export default function Home() {
   //Check for data coming in
   if (fetching)
     return (
-      <div className="loading-animation">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    );
-  if (error)
-    return (
-      <p>
+      <div className="loading-container">
         <div className="loading-animation">
           <div></div>
           <div></div>
           <div></div>
         </div>
-      </p>
+        <p>Loading... This might take few minutes</p>
+      </div>
+    );
+  if (error)
+    return (
+      <div className="loading-container">
+        <div className="loading-animation">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p>Loading... This might take few minutes</p>
+      </div>
     );
   const products = data.products.data;
 
@@ -55,8 +59,8 @@ export default function Home() {
             you!
           </p>
           <p>
-            You can go through our list and even add ideas to your cart! We&apos;ll
-            send you a lovely e-mail with your chosen activities.
+            You can go through our list and even add ideas to your cart!
+            We&apos;ll send you a lovely e-mail with your chosen activities.
           </p>
         </IntroductionText>
         <Gallery>
